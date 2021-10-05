@@ -14,7 +14,7 @@ from uuid import uuid4
 import json, base64, io, re
 from base64 import b64decode as triple
 from PIL import Image
-from telegram.ext import CallbackContext
+from telegram.ext import*
 from telegram import InlineQueryResultArticle, ParseMode, InputTextMessageContent, Update
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler, CallbackContext
 from telegram.utils.helpers import escape_markdown
