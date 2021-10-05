@@ -207,5 +207,5 @@ def main() -> None:
 
 
 
-#f __name__ == '__main__':
-main()
+if __name__ == '__main__':
+       main()
