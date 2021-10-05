@@ -8,5 +8,4 @@ soupsieve==2.2.1
 python-telegram-bot==12.4.2                                 
 urllib3==1.25.7
 tqdm==4.62.3
-urllib3==1.26.7
 Pillow==2.6.1
