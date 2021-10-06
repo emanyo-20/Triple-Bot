@@ -273,4 +273,11 @@ bot.enable_save_next_step_handlers(delay=0)
 # WARNING It will work only if enable_save_next_step_handlers was called!
 bot.load_next_step_handlers()
 
-bot.infinity_polling()
+while True:
+   try:
+     bot.polling()
+   except Exception:
+     time.sleep (10)
+bot.polling(none_stop=False, interval=0, timeout=20)
+
+
