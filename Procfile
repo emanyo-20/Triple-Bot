@@ -1,4 +1,4 @@
 
-worker: python3 triple.py
+worker: python3 eg.py
 
         
