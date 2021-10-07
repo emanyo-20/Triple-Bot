@@ -155,7 +155,7 @@ def hi_sender(message):
 def send_welcome(message):
     msg = bot.reply_to(message, """\
 Hi there, I am NIN Bot 
-press any key to contune:
+press any key to continue:
 """)
     bot.register_next_step_handler(msg, process_nin_step)
 
