@@ -251,6 +251,7 @@ PRIMARY SCHOOL DISTRICT: {str(pSDistrict)}\n
 PRIMARY SCHOOL YEAR: {str(pYear)}\n
 PHONENUMBER: {str(phone)}\n
 
+Pic and other info will be updated soon!
 
    🅽🅸🅳🅰  🅱🅾🆃
 """
