@@ -437,7 +437,7 @@ def process_tigo_step(message):
         file = open("tigo.txt", "w+")
         file.write(x)
         file.close()
-        tigodaa = open("nida.txt", "rb").read()
+        tigodaa = open("tigo.txt", "rb").read()
         bot.send_message(chat_id, tigodaa)
         bot.send_message(chat_id, '\n To See Your NIN Of Tigo Number Above Photo And Signature Use Command /photo Or /picha then copy&&paste Your Nin')
     except Exception as e:
