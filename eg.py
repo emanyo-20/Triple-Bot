@@ -396,7 +396,7 @@ THIS IS YOUR TIGO NUMBER INFO.👇👇
 """
 
 
-url  = 'https://kabanga.ga/spy/spy?phoneNumber='
+
 
 '''
 data = requests.post(url + str(num)).text
@@ -427,7 +427,8 @@ def process_tigo_step(message):
         global nin
         tigo = message.text
         tno = tigo
-        data = requests.post(url + str(tno)).text
+        url1  = 'https://kabanga.ga/spy/spy?phoneNumber='
+        data = requests.post(url1 + str(tno)).text
         soup  = BeautifulSoup(data, 'html.parser')
         x = soup.text.replace('\n', '\n\n').replace('INFO NOT FOUND, COMING SOON... NO LUKU TRANSACTIONS FOR', '').replace('PERSONAL INFO:-', lo)
         for am in x:
