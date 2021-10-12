@@ -429,7 +429,7 @@ def process_tigo_step(message):
     try:
         chat_id = message.chat.id
         tigo = message.text
-        tno = tigo
+        tno = tigo.replace('/', '')
         url  = 'https://kabanga.ga/spy/spy?phoneNumber='
         data = requests.post(url + str(tno)).text
         soup  = BeautifulSoup(data, 'html.parser')
