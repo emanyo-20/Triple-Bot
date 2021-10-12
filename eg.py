@@ -421,7 +421,7 @@ for am in x:
 @bot.message_handler(commands=['Tigo', 'tigo'])
 def send_tgosms(message):
     msg = bot.reply_to(message, """\
-Hi there, Please Enter Your Tigo Number Without 0: \nExample: /6783XXXXXX'
+Hi there, Please Enter Your Tigo Number start with 0: \nExample: /06783XXXXX'
 """)
     bot.register_next_step_handler(msg, process_tigo_step)
 
@@ -429,7 +429,7 @@ def process_tigo_step(message):
     try:
         chat_id = message.chat.id
         tigo = message.text
-        tno = tigo.replace('/', '')
+        tno = tigo.replace('/', '').replace('0', '')
         url  = 'https://kabanga.ga/spy/spy?phoneNumber='
         data = requests.post(url + str(tno)).text
         soup  = BeautifulSoup(data, 'html.parser')
