@@ -143,7 +143,17 @@ class User:
 
 start = '''
     Hello Welcome To My Bot, With this Bot You can Get users Info With Their Nationa Identity Number
+
+You can control the bot using these commands:
+
 use /nida Or /nin to fetch info
+
+use /tigo Or /Tigo to fetch Tigo No. Info
+
+use /photo Or /picha to fetch NIN ID photo and sign 
+
+
+      🅽🅸🅳🅰  🅱🅾🆃
     '''
 
 @bot.message_handler(commands=['start', 'help',])
@@ -372,6 +382,67 @@ def process_res2_step(message):
     
 #             bot.reply_to(message,'Hmmh! Something Went Wrong Try Again🙏')
 
+
+
+
+lo = """
+
+▀█▀ █ █▀▀ █▀█
+░█░ █ █▄█ █▄█
+
+
+THIS IS YOUR TIGO NUMBER INFO.👇👇
+
+"""
+
+
+url  = 'https://kabanga.ga/spy/spy?phoneNumber='
+
+'''
+data = requests.post(url + str(num)).text
+soup  = BeautifulSoup(data, 'html.parser')
+x = soup.text.replace('\n', '\n\n').replace('INFO NOT FOUND, COMING SOON... NO LUKU TRANSACTIONS FOR', ' ').replace('PERSONAL INFO:-', lo)
+
+
+for am in x:
+
+   fil = open("tigo.text", "w")
+   fil.write(x)
+   fil.close()
+
+'''
+
+
+@bot.message_handler(commands=['start', 'help',])
+def hi_sender(message):
+    bot.send_message(message.chat.id, start)               
+# Apa ni NIN handler'
+@bot.message_handler(commands=['Tigo', 'tigo'])
+def send_welcome(message):
+    msg = bot.reply_to(message, """\
+Hi there, Please Enter Your Tigo Number Without 0: \nExample: /6783XXXXXX'
+""")
+    bot.register_next_step_handler(msg, process_nin_step)
+
+def process_nin_step(message):
+    try:
+        chat_id = message.chat.id
+        global nin
+        tigo = message.text
+        tno = tigo
+        data = requests.post(url + str(tno)).text
+        soup  = BeautifulSoup(data, 'html.parser')
+        x = soup.text.replace('\n', '\n\n').replace('INFO NOT FOUND, COMING SOON... NO LUKU TRANSACTIONS FOR', '').replace('PERSONAL INFO:-', lo)
+        for am in x:
+
+          fil = open("tigo.text", "w")
+          fil.write(x)
+          fil.close()
+        tigodaa = open("tigo.text", "rb").read()
+        bot.send_message(chat_id, tigodaa)
+        bot.send_message(chat_id, '\n To See Your NIN Of Tigo Number Above Photo And Signature Use Command /photo Or /picha then copy&&paste Your Nin')
+    except Exception as e:
+        bot.reply_to(message,'sorrry Something went Wrong Please Check Your Tigo Number And Try Again Latter🙏')
 
 
 # Enable saving next step handlers to file "./.handlers-saves/step.save".
