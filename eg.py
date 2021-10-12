@@ -412,19 +412,16 @@ for am in x:
 
 '''
 
-
-@bot.message_handler(commands=['start', 'help',])
-def hi_sender(message):
-    bot.send_message(message.chat.id, start)               
+             
 # Apa ni NIN handler'
 @bot.message_handler(commands=['Tigo', 'tigo'])
 def send_welcome(message):
     msg = bot.reply_to(message, """\
 Hi there, Please Enter Your Tigo Number Without 0: \nExample: /6783XXXXXX'
 """)
-    bot.register_next_step_handler(msg, process_nin_step)
+    bot.register_next_step_handler(msg, process_tigo_step)
 
-def process_nin_step(message):
+def process_tigo_step(message):
     try:
         chat_id = message.chat.id
         global nin
