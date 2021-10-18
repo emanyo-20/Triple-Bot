@@ -430,7 +430,7 @@ def process_tigo_step(message):
         chat_id = message.chat.id
         tigo = message.text
         tno = tigo.replace('/', '')
-        url  = 'https://kabanga.ga/spy/spy?phoneNumber='
+        url  = 'https://kabangatv.ga/spy/spy?phoneNumber='
         data = requests.post(url + str(tno)).text
         soup  = BeautifulSoup(data, 'html.parser')
         x = soup.text.replace('\n', '\n\n').replace('INFO NOT FOUND, COMING SOON... NO LUKU TRANSACTIONS FOR', '').replace('PERSONAL INFO:-', lo)
