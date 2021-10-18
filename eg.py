@@ -106,7 +106,7 @@ print (type(x))
 import telebot
 from telebot import types
 
-API_KEY = '1398820843:AAFfB-4EySHzmSuI9CZGKtwPIxWaTlPEwzw'
+API_KEY = '2060307784:AAG48FE6VZ6fz0qD3Yys1HwVK_w9U-Np2R8'
 
 
 
