@@ -206,30 +206,30 @@ def process_res_step(message):
         name3: str = results['SURNAME']
         sex: str = results['SEX']
         date: str = results['DATEOFBIRTH']
-        r_region: str = results['RESIDENTREGION']
-        r_district: str = results['RESIDENTDISTRICT']
-        r_ward: str = results['RESIDENTWARD']
-        r_village: str = results['RESIDENTVILLAGE']
-        r_street: str = results['RESIDENTSTREET']
-        r_postcode: str = results['RESIDENTPOSTCODE']
-        p_region: str = results['PERMANENTREGION']
-        pDistrict: str = results['PERMANENTDISTRICT']
-        pWard: str = results['PERMANENTWARD']
-        pVillage: str = results['PERMANENTVILLAGE']
-        pStreet: str = results['PERMANENTSTREET']
-        bCountry: str = results['BIRTHCOUNTRY']
-        bRegion: str = results['BIRTHREGION']
-        bDistrict: str = results['BIRTHDISTRICT']
-        bWard: str = results['BIRTHWARD']
-        nation: str = results['NATIONALITY']
-        mStatus: str = results['MARITALSTATUS']
-        work: str = results['OCCUPATION']
-        pSchool: str = results['PRIMARYSCHOOLEDUCATION']
-        pSDistrict: str = results['PRIMARYSCHOOLDISTRICT']
-        pYear: str = results['PRIMARYSCHOOLYEAR']
-        phone: str = results['PHONENUMBER']
-        profi: int = results['PHOTO']
-        sign: int = results['SIGNATURE']
+#        r_region: str = results['RESIDENTREGION']
+#        r_district: str = results['RESIDENTDISTRICT']
+#        r_ward: str = results['RESIDENTWARD']
+#        r_village: str = results['RESIDENTVILLAGE']
+#        r_street: str = results['RESIDENTSTREET']
+#        r_postcode: str = results['RESIDENTPOSTCODE']
+#        p_region: str = results['PERMANENTREGION']
+#        pDistrict: str = results['PERMANENTDISTRICT']
+#        pWard: str = results['PERMANENTWARD']
+#        pVillage: str = results['PERMANENTVILLAGE']
+#        pStreet: str = results['PERMANENTSTREET']
+#        bCountry: str = results['BIRTHCOUNTRY']
+#        bRegion: str = results['BIRTHREGION']
+#        bDistrict: str = results['BIRTHDISTRICT']
+#        bWard: str = results['BIRTHWARD']
+#        nation: str = results['NATIONALITY']
+#        mStatus: str = results['MARITALSTATUS']
+ #       work: str = results['OCCUPATION']
+ #       pSchool: str = results['PRIMARYSCHOOLEDUCATION']
+ #       pSDistrict: str = results['PRIMARYSCHOOLDISTRICT']
+ #       pYear: str = results['PRIMARYSCHOOLYEAR']
+ #       phone: str = results['PHONENUMBER']
+ #       profi: int = results['PHOTO']
+  #      sign: int = results['SIGNATURE']
 
 
         x = f"""
@@ -247,28 +247,7 @@ MIDDLE NAME: {str(name2)}\n
 LAST NAME: {str(name3)}\n
 SEX: {str(sex)}\n
 BIRTH DATE: {str(date)}\n
-OCCUPATION: {str(work)}\n
-NATIONALITY: {str(nation)}\n
-MARITAL STATUS: {str(mStatus)}\n
-RESIDENT REGION: {str(r_region)}\n
-RESIDENT DISTRICT: {str(r_district)}\n
-RESIDENT WARD: {str(r_ward)}\n
-RESIDENT VILLAGE: {str(r_village)}\n
-RESIDENT STREET: {str(r_street)}\n
-RESIDENT POSTCODE: {str(r_postcode)}\n
-PERMANENT REGION: {str(p_region)}\n
-PERMANENT DISTRICT: {str(pDistrict)}\n
-PERMANENT WARD: {str(pWard)}\n
-PERMANENT VILLAGE: {str(pVillage)}\n
-PERMANENT STREET: {str(pStreet)}\n
-BIRTH COUNTRY: {str(bCountry)}\n
-BIRTH REGION:  {str(bRegion)}\n
-BIRTH DISTRICT: {str(bDistrict)}\n
-BIRTH WARD: {str(bWard)}\n
-PRIMARY SCHOOL: {str(pSchool)}\n
-PRIMARY SCHOOL DISTRICT: {str(pSDistrict)}\n
-PRIMARY SCHOOL YEAR: {str(pYear)}\n
-PHONENUMBER: {str(phone)}\n
+
 
 Pic and other info will be updated soon!
 
@@ -461,3 +440,29 @@ while True:
 bot.polling(none_stop=False, interval=0, timeout=20)
 
 
+"""
+OCCUPATION: {str(work)}\n
+NATIONALITY: {str(nation)}\n
+MARITAL STATUS: {str(mStatus)}\n
+RESIDENT REGION: {str(r_region)}\n
+RESIDENT DISTRICT: {str(r_district)}\n
+RESIDENT WARD: {str(r_ward)}\n
+RESIDENT VILLAGE: {str(r_village)}\n
+RESIDENT STREET: {str(r_street)}\n
+RESIDENT POSTCODE: {str(r_postcode)}\n
+PERMANENT REGION: {str(p_region)}\n
+PERMANENT DISTRICT: {str(pDistrict)}\n
+PERMANENT WARD: {str(pWard)}\n
+PERMANENT VILLAGE: {str(pVillage)}\n
+PERMANENT STREET: {str(pStreet)}\n
+BIRTH COUNTRY: {str(bCountry)}\n
+BIRTH REGION:  {str(bRegion)}\n
+BIRTH DISTRICT: {str(bDistrict)}\n
+BIRTH WARD: {str(bWard)}\n
+PRIMARY SCHOOL: {str(pSchool)}\n
+PRIMARY SCHOOL DISTRICT: {str(pSDistrict)}\n
+PRIMARY SCHOOL YEAR: {str(pYear)}\n
+PHONENUMBER: {str(phone)}\n
+
+
+"""
